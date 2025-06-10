@@ -1,6 +1,3 @@
-**`README_AR.md` (Arabic)**
-
-```markdown
 # دافي لتنزيل فيديوهات اليوتيوب
 
 دافي هو سكريبت شيل بسيط ولكنه قوي يستفيد من `yt-dlp` لتنزيل مقاطع الفيديو والصوت من يوتيوب والعديد من مواقع استضافة الفيديو الأخرى. تم تصميمه ليكون سهل الاستخدام مع الخيارات الشائعة ويتضمن دعمًا لـ Termux على أندرويد وتوزيعات لينكس المختلفة.
@@ -19,10 +16,11 @@
 
 1.  **تنزيل المشروع:**
     قم بتنزيل الملف المضغوط من مستودع GitHub أو استنسخه:
-    `git clone https://github.com/your_username/davi-youtube-downloader.git`
-    `cd davi-youtube-downloader`
+    
+    `git clone https://github.com/feraskm/DaVi.git`
+    `cd DaVi`
 
-2.  **تشغيل سكريبت التنصيب:**
+3.  **تشغيل سكريبت التنصيب:**
     ```bash
     chmod +x install.sh
     ./install.sh
@@ -34,12 +32,12 @@
     * إنشاء ملف تكوين افتراضي (`~/.dlconfig`) إذا لم يكن موجودًا.
     * تقديم تعليمات حول كيفية تثبيت `yt-dlp` و `ffmpeg` لنظامك المحدد (Termux/Linux).
 
-3.  **تثبيت الاعتماديات:**
+4.  **تثبيت الاعتماديات:**
     اتبع التعليمات المقدمة بواسطة سكريبت `install.sh` لتثبيت `yt-dlp` و `ffmpeg`.
     * **لـ Termux:** `pkg install python python-yt-dlp ffmpeg` (و `termux-setup-storage`).
     * **لـ Linux:** استخدم مدير حزم التوزيع الخاص بك (مثل `sudo apt install yt-dlp ffmpeg`) أو `pip`.
 
-4.  **إعادة تحميل الطرفية:**
+5.  **إعادة تحميل الطرفية:**
     بعد التثبيت، قم بتشغيل `source ~/.bashrc` أو `source ~/.zshrc` أو أعد تشغيل الطرفية لتفعيل اختصار `dv`.
 
 ## الاستخدام
@@ -48,3 +46,51 @@
 
 ```bash
 dv [خيارات] <رابط_الفيديو_أو_قائمة_التشغيل>
+```
+## الخيارات:
+* `audio`: تنزيل الصوت فقط.
+* `video`: تنزيل الفيديو (افتراضي).
+* `playlist`: تنزيل قائمة التشغيل كاملة.
+* `--format` FORMAT: تحديد تنسيق الملف (مثلاً `mp4`, `mkv` للفيديو؛ `mp3`, `wav` للصوت).
+* `--quality` QUALITY: جودة التنزيل (مثلاً `best`, `worst`, `720p`, `480p`).
+* `--resume`: استئناف التنزيلات المتقطعة.
+* `--config`: إنشاء أو إعادة إنشاء ملف التكوين الافتراضي (`~/.dlconfig`).
+* `--help`: عرض رسالة المساعدة.
+## أمثلة:
+```bash
+dv [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+dv [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ) audio
+dv [https://www.youtube.com/playlist?list=PLqc_aT2_aC_jKkS_jXlZ_xZ_xZ_xZ_xZ](https://www.youtube.com/playlist?list=PLqc_aT2_aC_jKkS_jXlZ_xZ_xZ_xZ_xZ) playlist
+dv [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ) --format mkv --quality 720p
+dv --resume
+```
+
+## التكوين
+يمكنك تخصيص إعدادات التنزيل الافتراضية عن طريق تعديل ملف `~/.dlconfig`.
+
+## إلغاء التنصيب
+لإزالة دافي والملفات المرتبطة به:
+```bash
+chmod +x uninstall.sh
+./uninstall.sh
+```
+سيؤدي ذلك إلى إزالة السكريبت، والاختصار، وسيقدم خيار إزالة ملف التكوين.
+
+## استكشاف الأخطاء وإصلاحها
+* `yt-dlp` أو `ffmpeg` غير موجود: تأكد من تثبيت الاعتماديات وفقًا لتعليمات التثبيت.
+* خطأ "externally-managed-environment" مع pip: في إصدارات Python الأحدث، قد يقيد pip عمليات التثبيت الشاملة.
+   جرب `sudo pip install yt-dlp --break-system-packages` بحذر، أو استخدم مدير حزم نظامك.
+* تخزين Termux: إذا واجهت مشكلات في التخزين في Termux، قم بتشغيل `termux-setup-storage`.
+
+## المساهمة
+لا تتردد في فتح مشكلات أو طلبات سحب على مستودع GitHub إذا كان لديك اقتراحات لتحسينات أو إصلاحات للأخطاء.
+
+
+
+
+
+
+
+
+
+
