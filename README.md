@@ -16,10 +16,12 @@ Davi is a simple yet powerful shell script that leverages `yt-dlp` to download v
 
 1.  **Download the project:**
     Download the compressed file from the GitHub repository or clone it:
-    `git clone https://github.com/feraskm/DaVi.git`
-    `cd DaVi`
+```bash
+git clone https://github.com/feraskm/DaVi.git
+cd DaVi
+```
 
-2.  **Run the installation script:**
+3.  **Run the installation script:**
     ```bash
     sudo chmod +x install.sh
     sudo ./install.sh
@@ -31,12 +33,12 @@ Davi is a simple yet powerful shell script that leverages `yt-dlp` to download v
     * Create a default configuration file (`~/.dlconfig`) if it doesn't exist.
     * Provide instructions on how to install `yt-dlp` and `ffmpeg` for your specific system (Termux/Linux).
 
-3.  **Install Dependencies:**
+4.  **Install Dependencies:**
     Follow the instructions provided by the `install.sh` script to install `yt-dlp` and `ffmpeg`.
     * **For Termux:** `pkg install python python-yt-dlp ffmpeg` (and `termux-setup-storage`).
     * **For Linux:** Use your distribution's package manager (e.g., `sudo apt install yt-dlp ffmpeg`) or `pip`.
 
-4.  **Reload your shell:**
+5.  **Reload your shell:**
     After installation, run `source ~/.bashrc` or `source ~/.zshrc` or restart your terminal to activate the `dv` alias.
 
 ## Usage:
