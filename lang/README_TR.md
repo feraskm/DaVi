@@ -1,6 +1,3 @@
-**`README_TR.md` (Turkish)**
-
-```markdown
 # Davi YouTube İndirici
 
 Davi, YouTube ve diğer birçok video barındırma sitesinden video ve ses indirmek için `yt-dlp`'yi kullanan basit ama güçlü bir kabuk betiğidir. Yaygın seçeneklerle kullanımı kolay olacak şekilde tasarlanmıştır ve Android'deki Termux ile çeşitli Linux dağıtımları için destek içerir.
@@ -19,8 +16,8 @@ Davi, YouTube ve diğer birçok video barındırma sitesinden video ve ses indir
 
 1.  **Projeyi indirin:**
     Sıkıştırılmış dosyayı GitHub deposundan indirin veya klonlayın:
-    `git clone https://github.com/your_username/davi-youtube-downloader.git`
-    `cd davi-youtube-downloader`
+    `git clone https://github.com/feraskm/DaVi.git`
+    `cd DaVi`
 
 2.  **Kurulum betiğini çalıştırın:**
     ```bash
@@ -48,28 +45,29 @@ Davi, YouTube ve diğer birçok video barındırma sitesinden video ve ses indir
 
 ```bash
 dv [Seçenekler] <video_veya_oynatma_listesi_urlsi>
-Seçenekler:
-audio: Yalnızca sesi indir.
-video: Videoyu indir (varsayılan).
-playlist: Tüm oynatma listesini indir.
---format FORMAT: Dosya formatını belirtin (örn. video için mp4, mkv; ses için mp3, wav).
---quality QUALITY: İndirme kalitesi (örn. best, worst, 720p, 480p).
---resume: Yarım kalan indirmeleri devam ettir.
---config: Varsayılan yapılandırma dosyasını (~/.dlconfig) oluştur veya yeniden oluştur.
---help: Yardım mesajını göster.
-Örnekler:
-Bash
+```
 
+## Seçenekler:
+* `audio`: Yalnızca sesi indir.
+* `video`: Videoyu indir (varsayılan).
+* `playlist`: Tüm oynatma listesini indir.
+* `--format` FORMAT: Dosya formatını belirtin (örn. video için `mp4`, `mkv`; ses için `mp3`, `wav)`.
+* `--quality` QUALITY: İndirme kalitesi (örn. `best`, `worst`, `720p`, `480p`).
+* `--resume`: Yarım kalan indirmeleri devam ettir.
+* `--config`: Varsayılan yapılandırma dosyasını (`~/.dlconfig`) oluştur veya yeniden oluştur.
+* `--help`: Yardım mesajını göster.
+## Örnekler:
+```Bash
 * dv [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 * dv [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ) audio
 * dv [https://www.youtube.com/playlist?list=PLqc_aT2_aC_jKkS_jXlZ_xZ_xZ_xZ_xZ](https://www.youtube.com/playlist?list=PLqc_aT2_aC_jKkS_jXlZ_xZ_xZ_xZ_xZ) playlist
 * dv [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ) --format mkv --quality 720p
 * dv --resume
-Yapılandırma
-Varsayılan indirme ayarlarını ~/.dlconfig dosyasını düzenleyerek özelleştirebilirsiniz.
+```
+## Yapılandırma
+Varsayılan indirme ayarlarını `~/.dlconfig` dosyasını düzenleyerek özelleştirebilirsiniz.
 
-Bash
-
+```Bash
 # ~/.dlconfig dosyasının örnek içeriği
 OUTPUT_DIR="${HOME}/Downloads/media"
 VIDEO_FORMAT="mp4"
@@ -78,19 +76,20 @@ VIDEO_QUALITY="best"
 AUDIO_QUALITY="0"
 EMBED_SUBS="yes"
 AUTO_SUBS="no"
-Kaldırma
+```
+## Kaldırma
 Davi'yi ve ilişkili dosyalarını kaldırmak için:
 
-Bash
-
+```Bash
 chmod +x uninstall.sh
 ./uninstall.sh
+```
 Bu, betiği, takma adı kaldıracak ve yapılandırma dosyasını kaldırmayı teklif edecektir.
 
 ## Sorun Giderme
-* yt-dlp veya ffmpeg bulunamadı: Kurulum talimatlarına göre bağımlılıkları yüklediğinizden emin olun.
-* pip ile "externally-managed-environment" hatası: Daha yeni Python sürümlerinde pip, genel kurulumları kısıtlayabilir. Dikkatli bir şekilde sudo pip install yt-dlp --break-system-packages komutunu deneyin veya sisteminizin paket yöneticisini kullanın.
-* Termux Depolama: Termux'ta depolama sorunları yaşıyorsanız, termux-setup-storage komutunu çalıştırın.
-* Katkıda Bulunma
-* İyileştirmeler veya hata düzeltmeleri için önerileriniz varsa, GitHub deposunda sorunlar veya çekme istekleri açmaktan çekinmeyin.
+* `yt-dlp` veya `ffmpeg` bulunamadı: Kurulum talimatlarına göre bağımlılıkları yüklediğinizden emin olun.
+* pip ile "externally-managed-environment" hatası: Daha yeni Python sürümlerinde pip, genel kurulumları kısıtlayabilir. Dikkatli bir şekilde `sudo pip install yt-dlp --break-system-packages` komutunu deneyin veya sisteminizin paket yöneticisini kullanın.
+* Termux Depolama: Termux'ta depolama sorunları yaşıyorsanız, `termux-setup-storage` komutunu çalıştırın.
+## Katkıda Bulunma
+ İyileştirmeler veya hata düzeltmeleri için önerileriniz varsa, GitHub deposunda sorunlar veya çekme istekleri açmaktan çekinmeyin.
 
