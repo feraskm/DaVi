@@ -21,8 +21,8 @@ Davi is a simple yet powerful shell script that leverages `yt-dlp` to download v
 
 2.  **Run the installation script:**
     ```bash
-    chmod +x install.sh
-    ./install.sh
+    sudo chmod +x install.sh
+    sudo ./install.sh
     ```
 
     The installer will:
@@ -82,8 +82,8 @@ AUTO_SUBS="no"
 ## Uninstallation
 To remove Davi and its associated files:
 ```bash
-chmod +x uninstall.sh
-./uninstall.sh
+sudo chmod +x uninstall.sh
+sudo ./uninstall.sh
 ```
 This will remove the script, the alias, and offer to remove the config file.
 
