@@ -1,0 +1,24 @@
+# إعدادات تنزيل الفيديو والصوت
+# OUTPUT_DIR: المجلد الذي سيتم حفظ الملفات التي تم تنزيلها فيه.
+#   - لـ Termux، المسار الشائع هو /data/data/com.termux/files/home/storage/downloads/media
+#   - لـ Linux، المسار الشائع هو /home/your_username/Downloads/media أو /home/your_username/Videos
+OUTPUT_DIR="${HOME}/Downloads/media" # موصى به لـ Linux
+
+# VIDEO_FORMAT: تنسيق الفيديو المطلوب (مثلاً mp4، mkv، webm)
+VIDEO_FORMAT="mp4"
+
+# AUDIO_FORMAT: تنسيق الصوت المطلوب (مثلاً mp3، wav، m4a)
+AUDIO_FORMAT="mp3"
+
+# VIDEO_QUALITY: جودة الفيديو (مثلاً best، worst، 1080p، 720p، 480p)
+VIDEO_QUALITY="best"
+
+# AUDIO_QUALITY: جودة الصوت (0 هي الأفضل، 9 هي الأسوأ للتنسيقات مثل mp3)
+AUDIO_QUALITY="0"
+
+# EMBED_SUBS: تضمين الترجمات في ملف الفيديو (yes/no)
+# لغات الترجمة مضبوطة حاليًا على العربية (ar) والإنجليزية (en).
+EMBED_SUBS="yes"
+
+# AUTO_SUBS: تنزيل الترجمات التي تم إنشاؤها تلقائيًا (yes/no)
+AUTO_SUBS="no"
