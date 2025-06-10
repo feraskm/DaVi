@@ -1,0 +1,24 @@
+# Video and Audio Download Settings
+# OUTPUT_DIR: The directory where downloaded files will be saved.
+#   - For Termux, a common path is /data/data/com.termux/files/home/storage/downloads/media
+#   - For Linux, a common path is /home/your_username/Downloads/media or /home/your_username/Videos
+OUTPUT_DIR="${HOME}/Downloads/media" # Recommended for Linux
+
+# VIDEO_FORMAT: Desired video format (e.g., mp4, mkv, webm)
+VIDEO_FORMAT="mp4"
+
+# AUDIO_FORMAT: Desired audio format (e.g., mp3, wav, m4a)
+AUDIO_FORMAT="mp3"
+
+# VIDEO_QUALITY: Video quality (e.g., best, worst, 1080p, 720p, 480p)
+VIDEO_QUALITY="best"
+
+# AUDIO_QUALITY: Audio quality (0 is best, 9 is worst for formats like mp3)
+AUDIO_QUALITY="0"
+
+# EMBED_SUBS: Embed subtitles into the video file (yes/no)
+# Subtitle languages currently set to Arabic (ar) and English (en).
+EMBED_SUBS="yes"
+
+# AUTO_SUBS: Download automatically generated subtitles (yes/no)
+AUTO_SUBS="no"
